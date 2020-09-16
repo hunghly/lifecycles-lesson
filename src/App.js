@@ -26,6 +26,7 @@ class App extends React.Component {
               }))
             }
           >
+            {this.state.text}
             Toggle Lifecycles
           </button>
           <button

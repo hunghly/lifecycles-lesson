@@ -6,9 +6,11 @@ class Lifecycles extends React.Component {
     console.log('constructor!');
   }
 
+  // once the component mounts, it executes the componentDidMount method
   componentDidMount() {
     console.log('componentDidMount!');
   }
+
 
   componentDidUpdate() {
     console.log('componentDidUpdate!');
@@ -20,6 +22,9 @@ class Lifecycles extends React.Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate!', nextProps);
+    console.log('====================================');
+    console.log(nextProps.text !== this.props.text);
+    console.log('====================================');
     return nextProps.text !== this.props.text;
   }
 
